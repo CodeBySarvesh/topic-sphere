@@ -4,6 +4,9 @@
 
 <div>
     {% for i in rooms %}
+    <div>
+        <span>@{{ i.host.username}}</span>
+    </div>
     <p>{{i.id}}.............. <a href="{% url 'room' i.id %}">{{i.name}}</a></p>
     {% endfor %}
 </div>
